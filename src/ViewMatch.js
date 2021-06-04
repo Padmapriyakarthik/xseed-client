@@ -27,7 +27,7 @@ function ViewMatch(props){
         <div className="container p-2">
             <div className="row">
             {loading ? <div><h4>{detail.team1} Vs {detail.team2}</h4>
-                        <p>{detail.season}, {detail.Date}, at {detail.venue}, {detail.city}</p>
+                        <p>{detail.season}, {detail.date}, at {detail.venue}, {detail.city}</p>
                         <p>Toss won by :{detail.toss_winner}, Toss_Decision :{detail.toss_decision}</p>
                         <h3>{detail.result}</h3>
                         <p>Player of the match: {detail.player_of_match}</p>

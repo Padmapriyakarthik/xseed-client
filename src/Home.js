@@ -13,7 +13,7 @@ function Home(props){
    const [loading,setLoading]=useState(0);
   
    const matchesCount=()=>{  
-        getMatchesCount().then((data)=>{
+        getMatchesCount(null,null).then((data)=>{
            const {count}=data;
             setCount(count);
             setLoading(1);
@@ -40,7 +40,7 @@ function Home(props){
                             <Route key={index} exact={route.exact} path={route.path} component={<route.main/>}/>
                       })*/}
                       <Route exact path={`/matches`} >{loading ? <ListMatches history={props.history} count={dataCount}/> : <></>} </Route>
-                    {  /*<Route   path={`/Notes/addnotes`} token={token}><AddNotes /></Route>*/}
+                        {  /*<Route   path={`/Notes/addnotes`} token={token}><AddNotes /></Route>*/}
                       <Route path={`/matches/:id`}><ViewMatch path={props.location.pathname} history={props.history}/></Route>
                    </Switch> 
                 </div>

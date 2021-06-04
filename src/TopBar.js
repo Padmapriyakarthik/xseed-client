@@ -1,5 +1,6 @@
 
 import logo from "./Images/IPL-Logo-w.png";
+
 function TopBar(props){
 
    
@@ -14,7 +15,6 @@ function TopBar(props){
                     <div className="navbar-header">
                     <li className="navbar-brand" ><img src={logo} alt="IPL" width="50" height="30"/></li>
                     </div>
-
                     <ul className="nav navbar-nav navbar-right">
                     <button type="button" style={{color:"white"}} className="btn btn-link" onClick={logout}>Logout</button>
                     </ul>

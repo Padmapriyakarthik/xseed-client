@@ -49,3 +49,6 @@
   background-size: 100% 100%;
 }
 
+div .onmouse:hover{
+  background-color: rgb(177, 175, 175);
+}
