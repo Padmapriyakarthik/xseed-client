@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.full-height {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("./Images/background.png");
+  height: 100%; 
+  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
