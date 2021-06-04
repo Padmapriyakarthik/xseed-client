@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL =/*'https://xseed-server.herokuapp.com'*/ 'http://localhost:4000';
+const BASE_URL ='https://xseed-server.herokuapp.com' ;/*'http://localhost:4000'*/;
 
 export const login = (email,password)=>{
     return axios
