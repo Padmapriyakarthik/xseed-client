@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 const BASE_URL ='https://xseed-server.herokuapp.com' ;
 
 export const login = (email,password)=>{
@@ -51,6 +52,11 @@ export const getTeam=()=>{
     .get(`${BASE_URL}/team`)
     .then((res)=>res.data).catch((error)=>(error.response.data));
 }
+export const getVenue=()=>{
+    return axios
+    .get(`${BASE_URL}/venue`)
+    .then((res)=>res.data).catch((error)=>(error.response.data));
+}
 
 export const getUserFavourite=(token)=>{
     return axios
@@ -85,4 +91,12 @@ export const getcurrentuser=(token)=>{
             authorization:token
         }
     }).then((res)=>res.data).catch((error)=>(error.response.data));
+}
+
+export const getPrediction=(team1,team2,venue,batteam)=>{
+    return axios
+    .get(`${BASE_URL}/prediction`,{ 
+        params: {team1,team2,venue,batteam} ,
+    })
+    .then((res)=>res.data).catch((error)=>(error.response.data));
 }

@@ -1,5 +1,6 @@
 
 import logo from "./Images/IPL-Logo-w.png";
+
 import { useEffect, useState } from "react";
 import { getcurrentuser} from "./interaction";
 function TopBar(props){
@@ -24,6 +25,9 @@ function TopBar(props){
         }  
       },[loading]);
   
+      const predict=()=>{
+        props.props.history.push(`/matches/winpredictor`)
+      }
     const logout=()=>{
         console.log(props);
         props.props.history.push(`/logout`)
@@ -36,6 +40,9 @@ function TopBar(props){
                     <li className="navbar-brand" ><img src={logo} alt="IPL" width="50" height="30"/></li>
                     <li className="navbar-brand" style={{textAlign:"right",color:"white"}}>{user.name?<span>Hai {user.name}!</span>:<></>}</li>
                     </div>
+                    <ul className="nav navbar-nav navbar-right">
+                    <button id="predict" type="button" style={{color:"white"}} className="btn btn-link" onClick={predict}>Win Predictor</button>
+                    </ul>
                     <ul className="nav navbar-nav navbar-right">
                     <button type="button" style={{color:"white"}} className="btn btn-link" onClick={logout}>Logout</button>
                     </ul>

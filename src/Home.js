@@ -5,6 +5,7 @@ import TopBar from "./TopBar";
 import ListMatches from "./ListMatches";
 import ViewMatch from "./ViewMatch"
 import './App.css';
+import Prediction from "./Prediction";
 function Home(props){
 
    const[dataCount,setCount]=useState(0);
@@ -33,23 +34,18 @@ function Home(props){
             <TopBar props={props}/>
             <div className="container">    
                 <div className="row">
-                
                    <Switch>
                       { /*routes.map((route,index)=>{
                             <Route key={index} exact={route.exact} path={route.path} component={<route.main/>}/>
                       })*/}
                       <Route exact path={`/matches`} >{loading ? <ListMatches history={props.history} count={dataCount}/> : <></>} </Route>
-                        {  /*<Route   path={`/Notes/addnotes`} token={token}><AddNotes /></Route>*/}
+                        <Route  exact path={`/matches/winpredictor`} ><Prediction /></Route>
                       <Route path={`/matches/:id`}><ViewMatch path={props.location.pathname} history={props.history}/></Route>
                    </Switch> 
                </div>
                 </div>
             </div>
-            
-        )
-    
-   
-}
+        )}
 
 export default Home;
 
