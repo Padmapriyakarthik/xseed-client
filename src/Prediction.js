@@ -134,7 +134,7 @@ function Prediction(){
                     </select>
                 </div>
                 <div className="col-2">
-                <button style={{color:"white"}} type="submit" className="btn btn-primary"  onClick={e => {e.preventDefault();predict()}}>Signup</button>
+                <button style={{color:"white"}} type="submit" className="btn btn-primary"  onClick={e => {e.preventDefault();predict()}}>Predict</button>
                 </div>
                 </div>
                 <div className="row">
