@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL ='https://xseed-server.herokuapp.com' ;/*'http://localhost:4000'*/;
+const BASE_URL ='https://xseed-server.herokuapp.com' ;
 
 export const login = (email,password)=>{
     return axios
@@ -50,4 +50,39 @@ export const getTeam=()=>{
     return axios
     .get(`${BASE_URL}/team`)
     .then((res)=>res.data).catch((error)=>(error.response.data));
+}
+
+export const getUserFavourite=(token)=>{
+    return axios
+    .get(`${BASE_URL}/users`,{
+        headers:{
+            authorization:token
+        }
+    }).then((res)=>res.data).catch((error)=>(error.response.data));
+}
+
+export const setUserFavourite=(token,favouriteteam)=>{
+    return axios
+    .put(`${BASE_URL}/users/favourite`,{favouriteteam},{
+        headers:{
+            authorization:token
+        }
+    }).then((res)=>res.data).catch((error)=>(error.response.data));
+}
+
+export const removeUserFavourite=(token)=>{
+    return axios
+    .put(`${BASE_URL}/users/remove`,{},{
+        headers:{
+            authorization:token
+        }
+    }).then((res)=>res.data).catch((error)=>(error.response.data));
+}
+export const getcurrentuser=(token)=>{
+    return axios
+    .get(`${BASE_URL}/users`,{
+        headers:{
+            authorization:token
+        }
+    }).then((res)=>res.data).catch((error)=>(error.response.data));
 }

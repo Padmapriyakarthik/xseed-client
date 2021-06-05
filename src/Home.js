@@ -7,11 +7,10 @@ import ViewMatch from "./ViewMatch"
 import './App.css';
 function Home(props){
 
-    
-  
    const[dataCount,setCount]=useState(0);
    const [loading,setLoading]=useState(0);
   
+   //to get total number document available without filter.
    const matchesCount=()=>{  
         getMatchesCount(null,null).then((data)=>{
            const {count}=data;
@@ -32,9 +31,9 @@ function Home(props){
            
         <div>
             <TopBar props={props}/>
-            <div className="container-fluid ">    
-                <div className="row content">
-                <div className="col-12 " id="content">  
+            <div className="container">    
+                <div className="row">
+                
                    <Switch>
                       { /*routes.map((route,index)=>{
                             <Route key={index} exact={route.exact} path={route.path} component={<route.main/>}/>
@@ -43,8 +42,7 @@ function Home(props){
                         {  /*<Route   path={`/Notes/addnotes`} token={token}><AddNotes /></Route>*/}
                       <Route path={`/matches/:id`}><ViewMatch path={props.location.pathname} history={props.history}/></Route>
                    </Switch> 
-                </div>
-                </div>
+               </div>
                 </div>
             </div>
             

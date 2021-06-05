@@ -52,3 +52,58 @@
 div .onmouse:hover{
   background-color: rgb(177, 175, 175);
 }
+
+
+
+.Delhi{
+  /*background-image: url("./Images/Delhi.png");*/
+  height: 80%;
+  position: fixed;
+  content:url("./Images/Delhi.png");
+ left: 50%;
+ 
+}
+.Chennai{
+  height: 80%;
+ position: fixed;
+ content:url("./Images/chennai.png");
+ left: 50%;
+}
+.Mumbai{
+  height: 80%;
+ position: fixed;
+ content:url("./Images/Mumbai.png");
+ left: 50%;
+}
+.Royal{
+  height: 80%;
+  width:40%;
+ position: fixed;
+ content:url("./Images/Royal.png");
+ left: 55%;
+}
+.Rajasthan{
+  height: 80%;
+ position: fixed;
+ content:url("./Images/Rajasthan.png");
+ left: 50%;
+}
+.Punjab{
+  height: 80%;
+  width:40%;
+ position: fixed;
+ content:url("./Images/Punjab.png");
+ left: 55%;
+}
+.Kolkata{
+  height: 80%;
+ position: fixed;
+ content:url("./Images/Kolkata.png");
+ left: 50%;
+}
+.Sunrises{
+  height: 80%;
+ position: fixed;
+ content:url("./Images/Sunrises.png");
+ left: 50%;
+}
