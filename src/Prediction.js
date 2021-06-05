@@ -118,7 +118,7 @@ function Prediction(){
                 </div>
                 <div className="col-4">
                     <select className="custom-select custom-select-md mb-2" id="venue" onChange={chooseVenue}>
-                        <option value={-1} >Select Team2</option>
+                        <option value={-1} >Select Venue</option>
                         {venue.map((elem,index)=>{
                             return(
                                 <option key={index} value={elem}>{elem}</option>
@@ -128,7 +128,7 @@ function Prediction(){
                 </div>
                 <div className="col-2">
                     <select className="custom-select custom-select-md mb-2" id="bat" onChange={chooseBat}>
-                    <option value={-1} >Choose Batting</option>
+                    <option value={-1} >Who Bats First?</option>
                     {team1 ? <option value={team1}>{team1}</option>:<></>}
                     {team2 ? <option value={team2}>{team2}</option>:<></>}
                     </select>
@@ -145,7 +145,7 @@ function Prediction(){
                     <div className="col-12">
                     <div className="row">
                         {(!prediction.team1count) && (!prediction.team2count) && (!prediction.tiecount) ? 
-                        <h2>NO Matches</h2>:
+                        <h2>No Matches</h2>:
                             <div style={{textAlign:"center"}} className="col-6">{(prediction.team1count) || (prediction.team2count)?
                             <div> <h2>Prediction Result</h2><p>{team1} : {prediction.team1predict}%</p>
                             <p>{team2}: {prediction.team2predict}%</p></div>:<p></p>}</div>
@@ -154,7 +154,7 @@ function Prediction(){
                             <div style={{textAlign:"center"}}  className="col-6">
                             {(prediction.team1count) || (prediction.team2count)?<div>
                                 <h2>Prediction result is based on Head to Head Matches</h2>
-                                <p>Total Match : {prediction.team1count+prediction.team2count}</p>
+                                <p>Total Matches : {prediction.team1count+prediction.team2count}</p>
                                 <p>{team1} wins : {prediction.team1count}</p>
                                 <p>{team2} wins : {prediction.team2count}</p>
                                 {prediction.tiecount ?<p>Tie: {prediction.tiecount}</p>:<></>}</div>:<></>}
